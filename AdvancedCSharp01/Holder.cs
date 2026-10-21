@@ -52,4 +52,6 @@ namespace AdvancedCSharp01
         public void Print() => Console.WriteLine(" Invoice Document ");
     }
 
+
+
 }

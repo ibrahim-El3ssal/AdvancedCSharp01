@@ -89,10 +89,16 @@ namespace AdvancedCSharp01
             Console.WriteLine("\n____________ Question10 :______________\n");
             /// An interface constraint (where T : IInterfaceName) specifies that the type argument must implement a specific interface. 
             /// This allows you to safely call methods or access properties defined in that interface on instances of T.
-      
 
             Printer<Invoice> invoicePrinter = new Printer<Invoice>();
             invoicePrinter.PrintItem(new Invoice());
+
+            #endregion
+
+            #region Question 11: What is the base class constraint? Write an example
+            Console.WriteLine("\n____________ Question11 :______________\n");
+            AnimalShelter<Dog> dogAnimal = new AnimalShelter<Dog>();
+            dogAnimal.ProcessAnimal(new Dog() { Name = "Buddy" });
 
             #endregion
             Console.ReadLine();
