@@ -54,8 +54,20 @@ namespace AdvancedCSharp01
             Console.WriteLine("\n____________ Question06 :______________\n");
             // A generic interface is a contract that defines methods and properties using a type parameter (<T>).
             // It enforces a structural blueprint on implementing classes while deferring the specification of the actual data type until execution or implementation.
+            #endregion
+
+            #region Question 07: What is the 'struct' constraint? Write an example
+            Console.WriteLine("\n____________ Question07 :______________\n");
+            /// The struct constraint(where T : struct) specifies that the type argument must be a non-nullable value type.
+            /// This restricts T to types like primitive numeric types, booleans, or custom structs, preventing reference types (classes) from being used.
+            
+            Holder<int> holder = new Holder<int>(2);
+            Console.WriteLine($"Value: {holder.GetValue()}");
 
             #endregion
+
+
+           
 
             Console.ReadLine();
         }
