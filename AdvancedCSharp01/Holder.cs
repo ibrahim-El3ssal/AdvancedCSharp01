@@ -23,5 +23,17 @@ namespace AdvancedCSharp01
         }
         public T GetValue() => _value;
     }
+    public class Product
+    {
+        public string Name { get; set; } = "Product Name";
+    }
+    internal class Holder3<T> where T : new()
+    {
+        public T CreateNewItem()
+        {
+            return new T();
+        }
+
+    }
 
 }

@@ -65,6 +65,7 @@ namespace AdvancedCSharp01
             Console.WriteLine($"Value: {holder.GetValue()}");
 
             #endregion
+
             #region Question 08: What is the 'class' constraint? Write an example
             /// The class constraint (where T : class) specifies that the type argument must be a reference type.
             /// This restricts T to classes, interfaces, or arrays, preventing value types (such as int, bool, or custom structs) from being used.
@@ -75,7 +76,14 @@ namespace AdvancedCSharp01
 
             #endregion
 
+            #region Question 09: What is the 'new()' constraint? Write an example
+            Console.WriteLine("\n____________ Question09 :______________\n");
 
+            Holder3 <Product> product = new Holder3<Product>();
+            Product newProduct = product.CreateNewItem();
+            Console.WriteLine($"Created Product: {newProduct.Name}");
+
+            #endregion
 
             Console.ReadLine();
         }
