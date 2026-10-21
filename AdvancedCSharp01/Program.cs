@@ -85,6 +85,16 @@ namespace AdvancedCSharp01
 
             #endregion
 
+            #region Question 10: What is the interface constraint? Write an example
+            Console.WriteLine("\n____________ Question10 :______________\n");
+            /// An interface constraint (where T : IInterfaceName) specifies that the type argument must implement a specific interface. 
+            /// This allows you to safely call methods or access properties defined in that interface on instances of T.
+      
+
+            Printer<Invoice> invoicePrinter = new Printer<Invoice>();
+            invoicePrinter.PrintItem(new Invoice());
+
+            #endregion
             Console.ReadLine();
         }
     }

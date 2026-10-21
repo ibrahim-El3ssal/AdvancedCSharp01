@@ -36,4 +36,20 @@ namespace AdvancedCSharp01
 
     }
 
+    public interface IPrintable
+    {
+        void Print();
+    }
+    public class Printer<T> where T : IPrintable
+    {
+        public void PrintItem(T item)
+        {
+            item.Print();
+        }
+    }
+    public class Invoice : IPrintable
+    {
+        public void Print() => Console.WriteLine(" Invoice Document ");
+    }
+
 }
