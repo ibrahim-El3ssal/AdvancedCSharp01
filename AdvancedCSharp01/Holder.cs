@@ -14,7 +14,14 @@ namespace AdvancedCSharp01
 
         public T GetValue() => _value;
     }
-
-  
+    internal class Holder2<T> where T : class
+    {
+        private T _value;
+        public Holder2(T value)
+        {
+            _value = value;
+        }
+        public T GetValue() => _value;
+    }
 
 }
