@@ -47,6 +47,14 @@ namespace AdvancedCSharp01
             int maxPrice = Helper.FindMaxInList(prices);
 
             Console.WriteLine($"Max Price: {maxPrice}");
+
+            #endregion
+
+            #region Question 06: What is a generic interface? Write IRepository<T>
+            Console.WriteLine("\n____________ Question06 :______________\n");
+            // A generic interface is a contract that defines methods and properties using a type parameter (<T>).
+            // It enforces a structural blueprint on implementing classes while deferring the specification of the actual data type until execution or implementation.
+
             #endregion
 
             Console.ReadLine();
