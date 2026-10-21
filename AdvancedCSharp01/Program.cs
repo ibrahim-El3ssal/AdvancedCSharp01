@@ -153,6 +153,16 @@ namespace AdvancedCSharp01
 
             #endregion
 
+
+            #region Question 17: What is the difference between covariance and contravariance?
+            Console.WriteLine("\n____________ Question17 :______________\n");
+            ///Covariance (out): Allows you to use a more derived type (child) where a base type (parent) is expected (e.g., assigning IEnumerable<Dog> to IEnumerable<Animal>).
+            ///It restricts the generic parameter T to output positions (return types only).
+
+            /// Contravariance(in): The exact opposite.It allows you to use a base type(parent) where a more derived type(child) is expected(e.g., assigning IProcessor< Animal> to IProcessor<Dog>).
+            /// It restricts the generic parameter T to input positions(method parameters only
+
+            #endregion
             Console.ReadLine();
         }
     }
