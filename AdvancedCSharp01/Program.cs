@@ -5,6 +5,7 @@ namespace AdvancedCSharp01
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
             #region Question 01: What is a generic class? Why use generics?
@@ -38,6 +39,14 @@ namespace AdvancedCSharp01
             Helper.Swap(ref x, ref y);
 
             Console.WriteLine($"After Swap: x = {x}, y = {y}");
+            #endregion
+
+            #region Question 05: Write a generic method FindMax<T> that finds maximum value
+            Console.WriteLine("\n____________ Question05 :______________\n");
+            List<int> prices = new List<int> { 99, 150, 45 };
+            int maxPrice = Helper.FindMaxInList(prices);
+
+            Console.WriteLine($"Max Price: {maxPrice}");
             #endregion
 
             Console.ReadLine();
