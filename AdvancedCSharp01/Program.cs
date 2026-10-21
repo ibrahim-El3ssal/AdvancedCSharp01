@@ -101,6 +101,19 @@ namespace AdvancedCSharp01
             dogAnimal.ProcessAnimal(new Dog() { Name = "Buddy" });
 
             #endregion
+           
+            #region Question 12: How do you apply multiple constraints? Write an example
+            Console.WriteLine("\n____________ Question12 :______________\n");
+            /// Multiple constraints allow you to apply more than one restriction on a single generic type parameter T (such as combining a base class constraint,
+            /// one or more interface constraints, and a constructor constraint). They are separated by commas (,)
+             
+            AdvancedManager<Order> manager = new AdvancedManager<Order>();
+            manager.ProcessAndCreate();
+
+            #endregion
+
+       
+
             Console.ReadLine();
         }
     }

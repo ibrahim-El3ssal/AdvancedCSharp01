@@ -52,6 +52,27 @@ namespace AdvancedCSharp01
         public void Print() => Console.WriteLine(" Invoice Document ");
     }
 
+    public class BaseEntity
+    {
+        public int Id { get; set; }
+    }
+    public class AdvancedManager<T> where T : BaseEntity, IPrintable, new()
+    {
+        public T ProcessAndCreate()
+        {
+            T item = new T();
 
+            item.Id = 505;
+
+            item.Print();
+
+            Console.WriteLine($"Generated Item ID: {item.Id}");
+            return item;
+        }
+    }
+    public class Order : BaseEntity, IPrintable
+    {
+        public void Print() => Console.WriteLine("Printing Order Details...");
+    } 
 
 }
