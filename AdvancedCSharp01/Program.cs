@@ -112,7 +112,13 @@ namespace AdvancedCSharp01
 
             #endregion
 
-       
+            #region Question 13: What does the 'default' keyword do in generics?
+            Console.WriteLine("\n____________ Question13 :______________\n");
+            ///  the default keyword is used to assign or return the default value of a generic type parameter T.
+            ///  For reference types (classes), the default value is null.
+            ///  For value types (structs, numeric types), the default value is 0 or equivalent zeroed state.
+            ///  This is necessary because you cannot directly use null or 0 for an unknown generic type T.  
+            #endregion
 
             Console.ReadLine();
         }
