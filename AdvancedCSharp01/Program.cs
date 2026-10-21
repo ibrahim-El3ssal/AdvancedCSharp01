@@ -180,6 +180,24 @@ namespace AdvancedCSharp01
             ///
             #endregion
 
+            #region Question 20: Complete Exercise - Create a generic Cache<TKey, TValue> with Add, Get, Remove, Contains, and expiration support
+            Console.WriteLine("\n____________ Question20 :______________\n");
+
+            Cache<string, string> userSessionCache = new Cache<string, string>();
+
+            userSessionCache.Add("Session_01", "Ibrahim_Admin", TimeSpan.FromSeconds(2));
+
+            Console.WriteLine($"Contains 'Session_01': {userSessionCache.Contains("Session_01")}");
+            Console.WriteLine($"Get 'Session_01': {userSessionCache.Get("Session_01")}");           
+
+            Console.WriteLine("\nWaiting for 3 seconds for cache to expire...");
+            System.Threading.Thread.Sleep(3000);
+
+            string expiredResult = userSessionCache.Get("Session_01");
+            Console.WriteLine($"Contains after expiry: {userSessionCache.Contains("Session_01")}"); 
+            Console.WriteLine($"Get after expiry: [{(expiredResult == null ? "Null (Expired)" : expiredResult)}]");
+            #endregion
+          
             Console.ReadLine();
         }
     }
