@@ -145,6 +145,14 @@ namespace AdvancedCSharp01
 
             #endregion
 
+            #region Question 16: What is contravariance? Explain the 'in' keyword
+            Console.WriteLine("\n____________ Question16:______________\n");
+            /// Contravariance is the reverse of covariance. It allows you to use a more generic/base type where a more derived type is expected
+            /// (i.e., assigning an IProcessor<Animal> to an IProcessor<Dog>).
+            ///The in keyword is used in generic interfaces to mark a type parameter as contravariant
+
+            #endregion
+
             Console.ReadLine();
         }
     }
