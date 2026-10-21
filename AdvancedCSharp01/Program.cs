@@ -168,7 +168,18 @@ namespace AdvancedCSharp01
             /// static members are not shared across different types.
             /// A separate static field or property is created for each unique type argument (T) supplied to the generic class.
             /// static members belong to the generic class itself, so they must be accessed via the class name, not through an instance.
+
             #endregion
+
+            #region Question 19: How can you inherit from a generic class?
+            Console.WriteLine("\n____________ Question19 :______________\n");
+            ///When a class inherits from a generic base class, you have two main options:
+            /// Keep it Generic: The derived class remains generic, passing its own type parameter T up to the base class.  Example: class FullRepository<T> : Repository<T>
+            /// Close the Type: The derived class stops being generic and locks the base class's type parameter to a specific, concrete type (like string or int) .  Example: class StringRepository : Repository<string> 
+            ///
+            ///
+            #endregion
+
             Console.ReadLine();
         }
     }
