@@ -29,6 +29,17 @@ namespace AdvancedCSharp01
             Console.WriteLine($"ID: {student.Key}, Name: {student.Value}");
             #endregion
 
+            #region Question 04: What is a generic method? Write Swap<T> method
+            /// A method that is declared with type parameters, allowing it to work with different data types without duplicating code for each specific type.
+            Console.WriteLine("\n____________ Question04 :______________\n");
+            int x = 5, y = 10;
+            Console.WriteLine($"Before Swap: x = {x}, y = {y}");
+
+            Helper.Swap(ref x, ref y);
+
+            Console.WriteLine($"After Swap: x = {x}, y = {y}");
+            #endregion
+
             Console.ReadLine();
         }
     }
