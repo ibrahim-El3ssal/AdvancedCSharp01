@@ -118,7 +118,22 @@ namespace AdvancedCSharp01
             ///  For reference types (classes), the default value is null.
             ///  For value types (structs, numeric types), the default value is 0 or equivalent zeroed state.
             ///  This is necessary because you cannot directly use null or 0 for an unknown generic type T.  
+            ///  
+
             #endregion
+
+            #region Question 14: Write a SafeList<T> that returns default when the index is invalid
+            Console.WriteLine("\n____________ Question14 :______________\n");
+            
+            SafeList<string> safeList = new SafeList<string>();
+            safeList.Add("html");
+            safeList.Add("css");
+
+            Console.WriteLine($"Index 0: {safeList.GetAt(0)}"); 
+            Console.WriteLine($"Index 1: {safeList.GetAt(1)}");
+
+            #endregion
+
 
             Console.ReadLine();
         }
