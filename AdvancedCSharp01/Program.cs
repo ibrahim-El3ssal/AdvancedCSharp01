@@ -134,6 +134,16 @@ namespace AdvancedCSharp01
 
             #endregion
 
+            #region Question 15: What is covariance? Explain the 'out' keyword
+            Console.WriteLine("\n____________ Question15 :______________\n");
+            /// Covariance enables you to use a more derived type than originally specified. In C# generics,
+            /// it allows an interface or delegate to return a more generic/base type than expected (i.e., assigning an IEnumerable<Dog> to an IEnumerable<Animal>).
+
+            /// The out keyword means "Output Only". It tells the compiler that type T will only be returned by methods,
+            /// never taken as an input parameter. This guarantees safety when doing Covariance, allowing you to treat a derived type (like Dog) as a base type (like Animal).
+            /// 
+
+            #endregion
 
             Console.ReadLine();
         }
