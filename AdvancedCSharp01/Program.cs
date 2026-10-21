@@ -153,7 +153,6 @@ namespace AdvancedCSharp01
 
             #endregion
 
-
             #region Question 17: What is the difference between covariance and contravariance?
             Console.WriteLine("\n____________ Question17 :______________\n");
             ///Covariance (out): Allows you to use a more derived type (child) where a base type (parent) is expected (e.g., assigning IEnumerable<Dog> to IEnumerable<Animal>).
@@ -162,6 +161,13 @@ namespace AdvancedCSharp01
             /// Contravariance(in): The exact opposite.It allows you to use a base type(parent) where a more derived type(child) is expected(e.g., assigning IProcessor< Animal> to IProcessor<Dog>).
             /// It restricts the generic parameter T to input positions(method parameters only
 
+            #endregion
+
+            #region Question 18: How do static members work in generic types?
+            Console.WriteLine("\n____________ Question18 :______________\n");
+            /// static members are not shared across different types.
+            /// A separate static field or property is created for each unique type argument (T) supplied to the generic class.
+            /// static members belong to the generic class itself, so they must be accessed via the class name, not through an instance.
             #endregion
             Console.ReadLine();
         }
