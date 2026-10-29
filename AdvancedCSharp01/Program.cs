@@ -8,14 +8,14 @@ namespace AdvancedCSharp01
 
         static void Main(string[] args)
         {
-            #region Question 01: What is a generic class? Why use generics?
+            #region Q01
             Console.WriteLine("\n____________ Question01 :______________\n");
 
             // Generics allow you to write classes, interfaces and methods with type parameters, The actual type is specified when the code is used, not when it is written.
             // we use generics because 1- it allows for type safety, 2- it allows for code reusability . 
             #endregion
 
-            #region Question 02: Generic class Container<T> with Add and Get methods
+            #region Q02
             Console.WriteLine("\n____________ Question02 :______________\n");
             Container <int> intContainer = new Container<int>();
             intContainer.Add(42);
@@ -23,14 +23,14 @@ namespace AdvancedCSharp01
             Console.WriteLine($"Value: {value}");
             #endregion
 
-            #region Question 03: What are multiple type parameters? Write Pair<TKey, TValue>
+            #region Q03
             Console.WriteLine("\n____________ Question03 :______________\n");
 
             Pair<int, string> student = new Pair<int, string>(1, "Elassal");
             Console.WriteLine($"ID: {student.Key}, Name: {student.Value}");
             #endregion
 
-            #region Question 04: What is a generic method? Write Swap<T> method
+            #region Q04
             /// A method that is declared with type parameters, allowing it to work with different data types without duplicating code for each specific type.
             Console.WriteLine("\n____________ Question04 :______________\n");
             int x = 5, y = 10;
@@ -41,7 +41,7 @@ namespace AdvancedCSharp01
             Console.WriteLine($"After Swap: x = {x}, y = {y}");
             #endregion
 
-            #region Question 05: Write a generic method FindMax<T> that finds maximum value
+            #region Q05
             Console.WriteLine("\n____________ Question05 :______________\n");
             List<int> prices = new List<int> { 99, 150, 45 };
             int maxPrice = Helper.FindMaxInList(prices);
@@ -50,13 +50,13 @@ namespace AdvancedCSharp01
 
             #endregion
 
-            #region Question 06: What is a generic interface? Write IRepository<T>
+            #region Q06
             Console.WriteLine("\n____________ Question06 :______________\n");
             // A generic interface is a contract that defines methods and properties using a type parameter (<T>).
             // It enforces a structural blueprint on implementing classes while deferring the specification of the actual data type until execution or implementation.
             #endregion
 
-            #region Question 07: What is the 'struct' constraint? Write an example
+            #region Q07
             Console.WriteLine("\n____________ Question07 :______________\n");
             /// The struct constraint(where T : struct) specifies that the type argument must be a non-nullable value type.
             /// This restricts T to types like primitive numeric types, booleans, or custom structs, preventing reference types (classes) from being used.
@@ -66,7 +66,7 @@ namespace AdvancedCSharp01
 
             #endregion
 
-            #region Question 08: What is the 'class' constraint? Write an example
+            #region Q08
             /// The class constraint (where T : class) specifies that the type argument must be a reference type.
             /// This restricts T to classes, interfaces, or arrays, preventing value types (such as int, bool, or custom structs) from being used.
             Console.WriteLine("\n____________ Question08 :______________\n");
@@ -76,7 +76,7 @@ namespace AdvancedCSharp01
 
             #endregion
 
-            #region Question 09: What is the 'new()' constraint? Write an example
+            #region Q09
             Console.WriteLine("\n____________ Question09 :______________\n");
 
             Holder3 <Product> product = new Holder3<Product>();
@@ -85,7 +85,7 @@ namespace AdvancedCSharp01
 
             #endregion
 
-            #region Question 10: What is the interface constraint? Write an example
+            #region Q10
             Console.WriteLine("\n____________ Question10 :______________\n");
             /// An interface constraint (where T : IInterfaceName) specifies that the type argument must implement a specific interface. 
             /// This allows you to safely call methods or access properties defined in that interface on instances of T.
@@ -95,14 +95,14 @@ namespace AdvancedCSharp01
 
             #endregion
 
-            #region Question 11: What is the base class constraint? Write an example
+            #region Q11
             Console.WriteLine("\n____________ Question11 :______________\n");
             AnimalShelter<Dog> dogAnimal = new AnimalShelter<Dog>();
             dogAnimal.ProcessAnimal(new Dog() { Name = "Buddy" });
 
             #endregion
            
-            #region Question 12: How do you apply multiple constraints? Write an example
+            #region Q12
             Console.WriteLine("\n____________ Question12 :______________\n");
             /// Multiple constraints allow you to apply more than one restriction on a single generic type parameter T (such as combining a base class constraint,
             /// one or more interface constraints, and a constructor constraint). They are separated by commas (,)
@@ -112,7 +112,7 @@ namespace AdvancedCSharp01
 
             #endregion
 
-            #region Question 13: What does the 'default' keyword do in generics?
+            #region Q13
             Console.WriteLine("\n____________ Question13 :______________\n");
             ///  the default keyword is used to assign or return the default value of a generic type parameter T.
             ///  For reference types (classes), the default value is null.
@@ -122,7 +122,7 @@ namespace AdvancedCSharp01
 
             #endregion
 
-            #region Question 14: Write a SafeList<T> that returns default when the index is invalid
+            #region Q14
             Console.WriteLine("\n____________ Question14 :______________\n");
             
             SafeList<string> safeList = new SafeList<string>();
@@ -134,7 +134,7 @@ namespace AdvancedCSharp01
 
             #endregion
 
-            #region Question 15: What is covariance? Explain the 'out' keyword
+            #region Q15
             Console.WriteLine("\n____________ Question15 :______________\n");
             /// Covariance enables you to use a more derived type than originally specified. In C# generics,
             /// it allows an interface or delegate to return a more generic/base type than expected (i.e., assigning an IEnumerable<Dog> to an IEnumerable<Animal>).
@@ -145,7 +145,7 @@ namespace AdvancedCSharp01
 
             #endregion
 
-            #region Question 16: What is contravariance? Explain the 'in' keyword
+            #region Q16
             Console.WriteLine("\n____________ Question16:______________\n");
             /// Contravariance is the reverse of covariance. It allows you to use a more generic/base type where a more derived type is expected
             /// (i.e., assigning an IProcessor<Animal> to an IProcessor<Dog>).
@@ -153,7 +153,7 @@ namespace AdvancedCSharp01
 
             #endregion
 
-            #region Question 17: What is the difference between covariance and contravariance?
+            #region Q17
             Console.WriteLine("\n____________ Question17 :______________\n");
             ///Covariance (out): Allows you to use a more derived type (child) where a base type (parent) is expected (e.g., assigning IEnumerable<Dog> to IEnumerable<Animal>).
             ///It restricts the generic parameter T to output positions (return types only).
@@ -163,7 +163,7 @@ namespace AdvancedCSharp01
 
             #endregion
 
-            #region Question 18: How do static members work in generic types?
+            #region Q18
             Console.WriteLine("\n____________ Question18 :______________\n");
             /// static members are not shared across different types.
             /// A separate static field or property is created for each unique type argument (T) supplied to the generic class.
@@ -171,7 +171,7 @@ namespace AdvancedCSharp01
 
             #endregion
 
-            #region Question 19: How can you inherit from a generic class?
+            #region Q19
             Console.WriteLine("\n____________ Question19 :______________\n");
             ///When a class inherits from a generic base class, you have two main options:
             /// Keep it Generic: The derived class remains generic, passing its own type parameter T up to the base class.  Example: class FullRepository<T> : Repository<T>
@@ -180,7 +180,7 @@ namespace AdvancedCSharp01
             ///
             #endregion
 
-            #region Question 20: Complete Exercise - Create a generic Cache<TKey, TValue> with Add, Get, Remove, Contains, and expiration support
+            #region Q20
             Console.WriteLine("\n____________ Question20 :______________\n");
 
             Cache<string, string> userSessionCache = new Cache<string, string>();
